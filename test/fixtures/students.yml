@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+lazy_student:
+  nickname: lazy
+  first_name: Lazy
+  last_name: Student
+
+brave_student:
+  nickname: brave
+  first_name: Brave
+  last_name: Student
+
+geek_student:
+  nickname: geek
+  first_name: Geek
+  last_name: Student

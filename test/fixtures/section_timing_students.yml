@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+geek_math2_time_mon:
+  section_timing: math2_time_mon
+  student: geek_student
+
+geek_math2_time_tue:
+  section_timing: math2_time_tue
+  student: geek_student
+
+geek_math2_time_wed:
+  section_timing: math2_time_wed
+  student: geek_student
+
+geek_math2_time_thu:
+  section_timing: math2_time_thu
+  student: geek_student
+
+geek_math2_time_fri:
+  section_timing: math2_time_fri
+  student: geek_student

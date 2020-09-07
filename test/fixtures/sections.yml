@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+math1:
+  teacher_subject: math_teacher_math
+  classroom: A1
+
+math2:
+  teacher_subject: math_and_english_teacher_math
+  classroom: C1
+
+english:
+  teacher_subject: math_and_english_teacher_english
+  classroom: B1

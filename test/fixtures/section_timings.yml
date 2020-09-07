@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+eng_time_mon:
+  section: english
+  day: 1
+  start_time: 450 # 07:30 AM
+  end_time: 500 # 08:20 AM
+
+eng_time_wed:
+  section: english
+  day: 3
+  start_time: 450 # 07:30 AM
+  end_time: 500 # 08:20 AM
+
+eng_time_fri:
+  section: english
+  day: 5
+  start_time: 450 # 07:30 AM
+  end_time: 500 # 08:20 AM
+
+math1_time_tue:
+  section: math1
+  day: 2
+  start_time: 710 # 11:50 AM
+  end_time: 760 # 12:40 PM
+
+math1_time_thu:
+  section: math1
+  day: 4
+  start_time: 710 # 11:50 AM
+  end_time: 760 # 12:40 PM
+
+math2_time_mon:
+  section: math2
+  day: 1
+  start_time: 740 # 12:20 PM
+  end_time: 820 # 13:40 PM
+
+math2_time_tue:
+  section: math2
+  day: 2
+  start_time: 740 # 12:20 PM
+  end_time: 820 # 13:40 PM
+
+math2_time_wed:
+  section: math2
+  day: 3
+  start_time: 740 # 12:20 PM
+  end_time: 820 # 13:40 PM
+
+math2_time_thu:
+  section: math2
+  day: 4
+  start_time: 740 # 12:20 PM
+  end_time: 820 # 13:40 PM
+
+math2_time_fri:
+  section: math2
+  day: 5
+  start_time: 740 # 12:20 PM
+  end_time: 820 # 13:40 PM

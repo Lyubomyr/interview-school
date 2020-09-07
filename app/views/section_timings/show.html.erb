@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @section_timing.section.title %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @section_timing.day %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @section_timing.start_time_to_s %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @section_timing.end_time_to_s %>
+</p>
+
+<%= link_to 'Edit', edit_section_timing_path(@section_timing) %> |
+<%= link_to 'Back', section_timings_path %>

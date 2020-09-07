@@ -9,6 +9,10 @@ class TeacherSubject < ApplicationRecord
   validates :level, presence: true
   before_validation :_default_values_on_create, on: :create
 
+  def title
+    "#{teacher.first_and_last_name} - #{subject.name}"
+  end
+
   def _default_values_on_create
     self.level ||= DEFAULT_LEVEL
     # return value should be true or nil

@@ -1,0 +1,27 @@
+<%= form_with(model: section_timing_student, local: true) do |form| %>
+  <% if section_timing_student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(section_timing_student.errors.count, "error") %> prohibited this section_timing_student from being saved:</h2>
+
+      <ul>
+        <% section_timing_student.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :section_timing %>
+    <%= form.select :section_timing_id, options_from_collection_for_select(SectionTiming.all, :id, :title, section_timing_student.section_timing_id) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student %>
+    <%= form.select :student_id, options_from_collection_for_select(Student.all, :id, :first_and_last_name, section_timing_student.student_id) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

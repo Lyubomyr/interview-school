@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Section timing:</strong>
+  <%= @section_timing_student.section_timing.title %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @section_timing_student.student.first_and_last_name %>
+</p>
+
+<%= link_to 'Edit', edit_section_timing_student_path(@section_timing_student) %> |
+<%= link_to 'Back', section_timing_students_path %>

@@ -1,0 +1,2 @@
+module SectionTimingsHelper
+end

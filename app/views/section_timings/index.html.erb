@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Section Timings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Day</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @section_timings.each do |section_timing| %>
+      <tr>
+        <td><%= section_timing.section.title %></td>
+        <td><%= section_timing.day.humanize %></td>
+        <td><%= section_timing.start_time_to_s %></td>
+        <td><%= section_timing.end_time_to_s %></td>
+        <td><%= link_to 'Show', section_timing %></td>
+        <td><%= link_to 'Edit', edit_section_timing_path(section_timing) %></td>
+        <td><%= link_to 'Destroy', section_timing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Section Timing', new_section_timing_path %>

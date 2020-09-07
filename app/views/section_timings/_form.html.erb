@@ -1,0 +1,44 @@
+<%= form_with(model: section_timing, local: true) do |form| %>
+  <% if section_timing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(section_timing.errors.count, "error") %> prohibited this section_timing from being saved:</h2>
+
+      <ul>
+        <% section_timing.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :section %>
+    <%= form.select :section_id, options_from_collection_for_select(Section.all, :id, :title, section_timing.section_id) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.select :day, SectionTiming.days.keys, { selected: section_timing.day } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <% start_time = section_timing.start_time_to_a %>
+    <%= form.select :start_time_hours, SectionTiming::AVAILABLE_HOURS, { selected: start_time[0] } %>
+    <%= form.select :start_time_minutes, SectionTiming::AVAILABLE_MINUTES, { selected: start_time[1] } %>
+    <%= form.select :start_time_am_pm, ['AM', 'PM'], { selected: start_time[2] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <% end_time = section_timing.end_time_to_a %>
+    <%= form.select :end_time_hours, SectionTiming::AVAILABLE_HOURS, { selected: end_time[0] } %>
+    <%= form.select :end_time_minutes, SectionTiming::AVAILABLE_MINUTES, { selected: end_time[1] } %>
+    <%= form.select :end_time_am_pm, ['AM', 'PM'], { selected: end_time[2] } %>
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
