@@ -15,6 +15,8 @@ class SectionTiming < ApplicationRecord
   validates :day, :start_time, :end_time, presence: true
   validate :time_is_valid
 
+  scope :order_by_time, -> { order(:day, :start_time) }
+
   before_validation :join_times
 
   ['start_time', 'end_time'].each do |field|
